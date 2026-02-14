@@ -17,14 +17,11 @@ def call_permutationcombination_api():
     Make a GET request to the Permutation &amp; Combination Calculator API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;n&#x27;: 10, &#x27;r&#x27;: 3}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
