@@ -1,39 +1,41 @@
 openapi: 3.0.4
 info:
   title: Permutation & Combination Calculator
-  description: Calculate permutations (P(n,r)) and combinations (C(n,r)) for any given values of n and r.
+  description: >-
+    Calculate permutations (P(n,r)) and combinations (C(n,r)) for any given
+    values of n and r.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/permutationcombination:
     get:
       summary: Calculate Permutation & Combination
-      description: Calculate permutations (P(n,r)) and combinations (C(n,r)) for any given values of n and r.
+      description: Calculate P(n,r) and C(n,r) values
       operationId: permutationcombination
       parameters:
-      - name: n
-        in: query
-        schema:
-          type: integer
-        required: true
-        description: Total number of items (0-170)
-        example: '10'
-      - name: r
-        in: query
-        schema:
-          type: integer
-        required: true
-        description: Number of items to choose (must be <= n)
-        example: '3'
+        - name: 'n'
+          in: query
+          schema:
+            type: integer
+          required: true
+          description: Total number of items
+          example: 10
+        - name: r
+          in: query
+          schema:
+            type: integer
+          required: true
+          description: Number of items to choose (must be <= n)
+          example: 3
       responses:
         '200':
           description: Successful Response
@@ -49,13 +51,13 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  n: 10
+                  'n': 10
                   r: 3
                   permutation: 720
                   combination: 120
@@ -67,7 +69,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -75,4 +77,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
