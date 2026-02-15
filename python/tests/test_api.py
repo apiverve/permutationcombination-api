@@ -1,5 +1,5 @@
 import unittest
-from apiverve_permutation&combinationcalculator.apiClient import PermutationcombinationAPIClient
+from apiverve_permutationcombinationcalculator.apiClient import PermutationcombinationAPIClient
 from unittest.mock import patch
 
 class TestPermutationcombinationAPIClient(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestPermutationcombinationAPIClient(unittest.TestCase):
         self.api_key = 'test_api_key'
         self.client = PermutationcombinationAPIClient(self.api_key)
 
-    @patch('apiverve_permutation&combinationcalculator.apiClient.requests.get')
+    @patch('apiverve_permutationcombinationcalculator.apiClient.requests.get')
     def test_make_request_success(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 200
@@ -16,7 +16,7 @@ class TestPermutationcombinationAPIClient(unittest.TestCase):
         response = self.client.get('test_endpoint')
         self.assertIsInstance(response, dict)
 
-    @patch('apiverve_permutation&combinationcalculator.apiClient.requests.get')
+    @patch('apiverve_permutationcombinationcalculator.apiClient.requests.get')
     def test_make_request_failure(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 404
