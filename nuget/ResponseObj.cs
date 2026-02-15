@@ -6,7 +6,7 @@
 //
 //    var responseObj = ResponseObj.FromJson(jsonString);
 
-namespace APIVerve.API.Permutation&CombinationCalculator
+namespace APIVerve.API.PermutationCombinationCalculator
 {
     using System;
     using System.Collections.Generic;
