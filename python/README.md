@@ -44,7 +44,10 @@ from apiverve_permutationcombinationcalculator.apiClient import Permutationcombi
 # Initialize the client with your APIVerve API key
 api = PermutationcombinationAPIClient("[YOUR_API_KEY]")
 
-query = { "n": 10, "r": 3 }
+query = {
+    "n": 10,
+    "r": 3
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "n": 10, "r": 3 }
+query = {
+    "n": 10,
+    "r": 3
+}
 ```
 
 ###### Simple Request
@@ -127,7 +133,10 @@ from apiverve_permutationcombinationcalculator.apiClient import Permutationcombi
 
 api = PermutationcombinationAPIClient("[YOUR_API_KEY]")
 
-query = { "n": 10, "r": 3 }
+query = {
+    "n": 10,
+    "r": 3
+}
 
 try:
     result = api.execute(query)
@@ -148,7 +157,10 @@ from apiverve_permutationcombinationcalculator.apiClient import Permutationcombi
 
 api = PermutationcombinationAPIClient("[YOUR_API_KEY]")
 
-query = { "n": 10, "r": 3 }
+query = {
+    "n": 10,
+    "r": 3
+}
 
 try:
     result = api.execute(query)
@@ -182,7 +194,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_permutationcombinationcalculator.apiClient import PermutationcombinationAPIClient, PermutationcombinationAPIClientError
 
-query = { "n": 10, "r": 3 }
+query = {
+    "n": 10,
+    "r": 3
+}
 
 # Using context manager ensures proper cleanup
 with PermutationcombinationAPIClient("[YOUR_API_KEY]") as api:
@@ -208,7 +223,10 @@ from apiverve_permutationcombinationcalculator.apiClient import Permutationcombi
 # Enable debug mode
 api = PermutationcombinationAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "n": 10, "r": 3 }
+query = {
+    "n": 10,
+    "r": 3
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -223,8 +241,12 @@ from apiverve_permutationcombinationcalculator.apiClient import Permutationcombi
 
 api = PermutationcombinationAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "n": 10,
+    "r": 3
+}
+
 try:
-    query = { "n": 10, "r": 3 }
     result = api.execute(query)
     print(result)
 finally:
