@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/permutationcombination",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Calculate permutations (P(n,r)) and combinations (C(n,r)) for any given values of n and r.",
   "main": "index.js",
   "types": "index.d.ts",
