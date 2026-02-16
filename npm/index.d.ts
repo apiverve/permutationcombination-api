@@ -7,7 +7,7 @@ declare module '@apiverve/permutationcombination' {
   export interface permutationcombinationResponse {
     status: string;
     error: string | null;
-    data: Permutation&CombinationCalculatorData;
+    data: PermutationCombinationCalculatorData;
     code?: number;
   }
 
