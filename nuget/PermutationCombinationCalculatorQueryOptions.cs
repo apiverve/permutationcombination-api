@@ -14,12 +14,12 @@ namespace APIVerve.API.PermutationCombinationCalculator
         /// Total number of items
         /// </summary>
         [JsonProperty("n")]
-        public string N { get; set; }
+        public int N { get; set; }
 
         /// <summary>
         /// Number of items to choose (must be <= n)
         /// </summary>
         [JsonProperty("r")]
-        public string R { get; set; }
+        public int R { get; set; }
     }
 }
