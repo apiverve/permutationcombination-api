@@ -25,21 +25,24 @@ namespace APIVerve.API.PermutationCombinationCalculator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("n")]
-        public long N { get; set; }
+        public long? N { get; set; }
 
         [JsonProperty("r")]
-        public long R { get; set; }
+        public long? R { get; set; }
 
         [JsonProperty("permutation")]
-        public long Permutation { get; set; }
+        public long? Permutation { get; set; }
 
         [JsonProperty("combination")]
-        public long Combination { get; set; }
+        public long? Combination { get; set; }
 
         [JsonProperty("formulas")]
         public Formulas Formulas { get; set; }
@@ -52,5 +55,17 @@ namespace APIVerve.API.PermutationCombinationCalculator
 
         [JsonProperty("combination")]
         public string Combination { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
