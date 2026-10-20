@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/permutationcombination:
     get:
-      summary: Calculate Permutation & Combination
+      summary: Permutation & Combination Calculator
       description: Calculate P(n,r) and C(n,r) values
       operationId: permutationcombination
       parameters:
