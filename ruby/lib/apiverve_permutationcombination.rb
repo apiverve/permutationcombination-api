@@ -4,6 +4,6 @@ require_relative "apiverve_permutationcombination/client"
 
 module APIVerve
   module Permutationcombination
-    VERSION = "1.2.2"
+    VERSION = "1.2.3"
   end
 end
