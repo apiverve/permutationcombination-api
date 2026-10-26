@@ -1,7 +1,7 @@
 {
     "name": "apiverve/permutationcombination",
     "description": "Calculate permutations (P(n,r)) and combinations (C(n,r)) for any given values of n and r.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
